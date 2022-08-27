@@ -1,7 +1,4 @@
-import builtins
-import string
-from sys import builtin_module_names
-print(dir(builtins))
+
 def to_camel_case(text):
     #your code here
     if text == "":
@@ -17,3 +14,9 @@ def to_camel_case(text):
 
 print(to_camel_case("The-cat_Is_evil"))
 
+def count_bits(n):
+    for num in range(2, n):
+        if n % num == 1:
+            print(num)
+        
+count_bits(1234)
