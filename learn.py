@@ -1,22 +1,32 @@
-# python datastructure are divided into two built-in and user defined 
+from data import data 
+"""
+Question 1a.
+    using data from data.py
 
 """
-builtin are lists, tuple, dictionary and sets
 
-list are ordered and can be nested and mutable and items can be accessed using index 
+def statistics(key, dictionary):
+    # using key parameter to get data to be calculated
+    
+    all_data = dictionary[:key]
+    sum = 0
+    actcost_list = []
+    for data in all_data:
+        sum += data["act_cost"]
+        actcost_list.append(data["act_cost"])
 
-tuple are ordered and can be accessed using index they are faster than list 
+    
+    mean = sum // len(all_data)
 
-A tuple with single item can be created using 
+    print(len(actcost_list), actcost_list)
+    # if len(actcost_list) % 2 :
+    #     nth = len(actcost_list) / 2 
+    #     median = nth + 1 // 2
+    # else :
 
-new_tuple = (7, )
 
-tuple are immutable and can be nested
+    median = len(actcost_list) % 2
 
-Dictionaries are unordered and can be accessed using keys 
 
-dicitionaries are mutable 
 
-it can be looped using dictionaries.items()
-
-"""
+statistics(8, data)
