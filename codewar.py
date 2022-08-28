@@ -72,17 +72,18 @@ print(valid_parentheses('yl)(g(ty)(ewc(()isbq)ca)x()gbc'))
 
 
 
-import math
+print(45 // 2)
 
 def make_readable(seconds):
      # Do something
-    a=str(seconds//3600)
-    b=str((seconds%3600)//60)
-    c=str((seconds%3600)%60)
-    list = [a, b, c]
-    new_t = [n if len(n) > 1 else "0" + n for n in list]
+    a=str(seconds/3600)
+    b=str((seconds/3600)%60)
+    c=str(seconds%60)
+    # list = [a, b, c]
+    # new_t = [n if len(n) > 1 else "0" + n for n in list]
 
-    return ":".join(new_t)
+
+    return "{:02}:{:02}:{:02}".format(a, b, c)
     
 #     if seconds >= 60:
 #         if seconds % 3600 == 0 :
@@ -106,5 +107,5 @@ def make_readable(seconds):
 #         return ":".join(new_t)
     
 
-make_readable(60)
+print(make_readable(60))
     
