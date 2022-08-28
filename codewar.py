@@ -72,19 +72,22 @@ print(valid_parentheses('yl)(g(ty)(ewc(()isbq)ca)x()gbc'))
 
 
 
-print(45 // 2)
+print(45 / 2)
 
 def make_readable(seconds):
      # Do something
-    a=str(seconds/3600)
-    b=str((seconds/3600)%60)
-    c=str(seconds%60)
-    # list = [a, b, c]
-    # new_t = [n if len(n) > 1 else "0" + n for n in list]
+    a=str(seconds//3600)
+    b=str((seconds%3600)//60)
+    c=str((seconds%3600)%60)
+    list = [a, b, c]
+    new_t = [n if len(n) > 1 else "0" + n for n in list]
 
-
-    return "{:02}:{:02}:{:02}".format(a, b, c)
+    return ":".join(new_t)
     
+
+def sum_dig_now(a, b):
+        return [x for x in range(a, b+1) if sum(int(d)**i for i, d in enumerate(str(x), 1)) == x]
+
 #     if seconds >= 60:
 #         if seconds % 3600 == 0 :
 #             hrs = math.floor(seconds / 3600)
