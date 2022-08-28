@@ -69,3 +69,22 @@ def sort_array(source_array):
         return source_array
 
 sort_array([5, 3, 2, 8, 1, 4])
+
+
+
+import math
+def make_readable(seconds):
+    # Do something
+    if seconds > 60:
+        hrs = math.floor(seconds / 3600)
+        if seconds % 60 == 0:
+            mins = seconds / 60
+        else:
+            mins = seconds % 60
+
+        secs = mins % 60
+        return(hrs, mins, secs)
+    else:
+        secs = seconds
+        return (0, 0, secs)
+    
