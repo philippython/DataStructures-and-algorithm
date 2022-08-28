@@ -54,37 +54,57 @@ def valid_parentheses(string):
 
 print(valid_parentheses('yl)(g(ty)(ewc(()isbq)ca)x()gbc'))
 
-def sort_array(source_array):
-    # Return a sorted array.
-    if not source_array : 
-        return []
-    else:
-        for num in source_array:
-            for n in range(0, max(source_array)):
-                if n % 2 == 1 :
-                    print(source_array.index(num))
-                    print(n)
-                    source_array[source_array.index(num)] = n
-            print(source_array)
-        return source_array
+# def sort_array(source_array):
+#     # Return a sorted array.
+#     if not source_array : 
+#         return []
+#     else:
+#         for num in source_array:
+#             for n in range(0, max(source_array)):
+#                 if n % 2 == 1 :
+#                     print(source_array.index(num))
+#                     print(n)
+#                     source_array[source_array.index(num)] = n
+#             print(source_array)
+#         return source_array
 
-sort_array([5, 3, 2, 8, 1, 4])
+# sort_array([5, 3, 2, 8, 1, 4])
 
 
 
 import math
-def make_readable(seconds):
-    # Do something
-    if seconds > 60:
-        hrs = math.floor(seconds / 3600)
-        if seconds % 60 == 0:
-            mins = seconds / 60
-        else:
-            mins = seconds % 60
 
-        secs = mins % 60
-        return(hrs, mins, secs)
-    else:
-        secs = seconds
-        return (0, 0, secs)
+def make_readable(seconds):
+     # Do something
+    a=str(seconds//3600)
+    b=str((seconds%3600)//60)
+    c=str((seconds%3600)%60)
+    list = [a, b, c]
+    new_t = [n if len(n) > 1 else "0" + n for n in list]
+
+    return ":".join(new_t)
+    
+#     if seconds >= 60:
+#         if seconds % 3600 == 0 :
+#             hrs = math.floor(seconds / 3600)
+#             mins = 0
+#         else :
+#             hrs = math.floor(seconds / 3600)
+#         if seconds % 60 == 0:
+#             mins = math.floor(seconds / 60)
+#             secs = 0
+#         else:
+#             mins = seconds % 60
+#             secs = mins % 60
+#         time = [str(hrs) , str(mins) , str(secs)]
+#         new_t = [n if len(n) > 1 else "0" + n for n in time ]
+#         return  ":".join(new_t)
+#     else:
+#         secs = seconds
+#         time = [str(0), str(0), str(secs)]
+#         new_t = [n if len(n) > 1 else "0" + n for n in time ]
+#         return ":".join(new_t)
+    
+
+make_readable(60)
     
