@@ -24,8 +24,8 @@ print(obj1.attr1)
 # Uncommenting print(obj1.c) will
 # raise an AttributeError
  
-obj2 = Derived("Toronto")
-print(obj2.__c)
+obj2 = Derived()
+print(obj2._Derived__c)
 # Uncommenting obj2 = Derived() will
 # also raise an AtrributeError as
 # private member of base class
