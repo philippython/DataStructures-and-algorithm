@@ -46,3 +46,7 @@ while len(new) < len(rand_list):
 
 getword(random_dict)
 # statistics(8, data)
+
+
+
+
