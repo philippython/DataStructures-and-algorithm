@@ -52,3 +52,14 @@ def rgb(r, g, b):
     round = lambda x: min(255, max(x, 0))
     return ("{:02X}" * 3).format(round(r), round(g), round(b))
 
+
+name = "Alice"
+
+"Hello %s" % name
+"Hello {0}".format(name)
+f"Hello {name}"
+
+# Using named arguments:
+"Hello %(kwarg)s" % {'kwarg': name}
+"Hello {kwarg}".format(kwarg=name)
+f"Hello {name}"
