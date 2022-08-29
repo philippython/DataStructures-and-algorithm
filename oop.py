@@ -12,7 +12,7 @@ class Derived(Base):
  
         # Calling constructor of
         # Base class
-        super().__init__(self, city)
+        super().__init__(city)
         print("Calling private member of base class: ")
  
  
@@ -24,8 +24,9 @@ print(obj1.attr1)
 # Uncommenting print(obj1.c) will
 # raise an AttributeError
  
-obj2 = Derived()
-print(obj2._Derived__c)
+obj2 = Derived("Toronto")
+print(dir(obj2))
+print(obj2._Base__c)
 # Uncommenting obj2 = Derived() will
 # also raise an AtrributeError as
 # private member of base class
