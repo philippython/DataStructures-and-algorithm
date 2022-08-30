@@ -63,6 +63,19 @@
 # "Hello %(kwarg)s" % {'kwarg': name}
 # "Hello {kwarg}".format(kwarg=name)
 # f"Hello {name}"
+def decorator(body):
+    def new_function():
+        body()
+        print("Just trying to make you better")
+        
+    return new_function
+
+@decorator
+def need_dec():
+    print("I need help!!")
+
+need_dec()
+
 
 class Developer:        
     age = 18
