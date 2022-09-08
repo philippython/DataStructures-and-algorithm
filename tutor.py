@@ -19,20 +19,50 @@
 # # name.replace('j', 'b')
 # # print(name)
 # print(dir(name))
-new_list = [3, 4, 6]
-extension = [8, 9, 45]
-developers = ["john", "james", "peter", "paul", 9, 20, True, False, 78.9]
+# new_list = [3, 4, 6]
+# extension = [8, 9, 45]
+# developers = ["john", "james", "peter", "paul", 9, 20, True, False, 78.9]
 # print(dir(developers))
 # developers.append(new_list)
 # developers.extend(extension)
 # developers.insert(1, "philip")
 # print(developers)
-print(len(developers))
-# developers[start:stop:step]
+# print(len(developers))
+# [start:stop:step]
 
-first_item = developers[2:-1:2]
-print(first_item)
+second_list = [ 8, 9, 4, 78, 99, 100, 23]
+multiple_list = []
+
+for item in second_list:
+    if item > 10:
+        multiple_list.append(item)
+    else:
+        pass
+print(multiple_list)
+
+# list comprehension 
+new_list = [num  for num in second_list if num >  10 ]
+print(new_list)
+
+# indexing = [1, 2, 3, 4, 5, 6, 7 ,8] 
+# print(second_list[0])
+# print(second_list[1])
+# [start:stop:step]
+# print(len(second_list))
+# print(second_list[start:stop:step])
 """
+print(indexing[:2]) 
+print(indexing[2:])
+print(indexing[::-2])
+#  whenever the a single colon is before a number then we are specifying the stopping index
+#  whenever the a single colon is after a number then we are specifying the starting index 
+print(indexing[2:-1:1])
+['talabi', 'dare', 9]
+# acccesing items of a list
+# talabi 0
+# sani 1
+#  dare 2
+
 is a list mutable
 mutability is the ability to change contents of a data structure after it has been defined
 
