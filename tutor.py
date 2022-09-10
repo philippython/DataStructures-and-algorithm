@@ -1,4 +1,58 @@
 # string formatting
+"""
+we have 4 major types of data structures in python
+data structures are ways our datas can be order or sorted depending on 
+list
+dictionaries
+tuples 
+sets
+key ->  value
+boy -> a boy is  a male 
+
+is a list mutable or immutable
+
+"""
+variable = "laptop" #lapto
+new_list = [5, 6, 7]
+# print(dir(variable))
+new_list.append(100)
+# print(new_list)
+variables = variable + "s"
+
+
+# list, dictionary 0, 1, strings
+#  dictionaries in python clear(), copy()
+"""
+e_commerce = {"laptop":500, "phone": 120, (9, 7, 8): "class", "cooker": 800,"false": {"large": 70, "small": 50}, "orders":[23, 67, 89]}
+e_commerce_copy = e_commerce.copy()
+print(e_commerce.get("laptop"))
+print(e_commerce["false"])
+e_commerce["footballer"] = ["messi", "de bruyne", "mane"]
+
+print(e_commerce)
+"""
+class MyDict:
+    def __init__(self, dict):
+        self.diction = dict
+
+    def gets(self, key, *args):
+        """OOP error handling"""
+        try:
+            self.diction[key]
+        except KeyError:
+            return args[0] if args else None
+        else:
+            return self.diction[key]
+
+new_dict = MyDict({"key":"value"})
+print(new_dict.gets("ke", ))
+
+#  getting , adding , iterating(looping), deleting, 
+# print(dir(e_commerce))
+# school = dict()
+# print(dir(e_commerce))
+# print(e_commerce)
+# print(school)
 # list ,creation, iteration , comprehension, slicing, 
 # dictionaries, creation , iteration, comprehension, keys, value, items()
 # tuples
@@ -30,7 +84,7 @@
 # print(len(developers))
 # [start:stop:step]
 
-second_list = [ 8, 9, 4, 78, 99, 100, 23]
+second_list = [ 8, 9, 4, 78, 99,True, 100, 23]
 multiple_list = []
 
 for item in second_list:
@@ -38,7 +92,7 @@ for item in second_list:
         multiple_list.append(item)
     else:
         pass
-print(multiple_list)
+# print(multiple_list)
 
 # list comprehension 
 new_list = [num  for num in second_list if num >  10 ]
